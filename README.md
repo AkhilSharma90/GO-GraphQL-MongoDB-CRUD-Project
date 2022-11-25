@@ -1,4 +1,4 @@
-#GOLANG GRAPHQL MONGODB CRUD Project
+# GOLANG GRAPHQL MONGODB CRUD Project
 
 #### This is the accompanying code for my Youtube video with the same name (almost the same name)
 
