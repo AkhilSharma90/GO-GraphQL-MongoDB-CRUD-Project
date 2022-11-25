@@ -13,7 +13,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-var connectionString string = "your mongodb string here"
+var connectionString string = "mongodb+srv://akhil:akhil@cluster0.td5oga4.mongodb.net/test"
 
 type DB struct {
 	client *mongo.Client
@@ -30,13 +30,6 @@ func Connect() *DB {
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = client.Ping(ctx, readpref.Primary())
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	ctx, cancel = context.WithTimeout(context.Background(), 2*time.Second)
-	defer cancel()
 	err = client.Ping(ctx, readpref.Primary())
 	if err != nil {
 		log.Fatal(err)
